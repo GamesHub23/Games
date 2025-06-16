@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Games - Meniu Principal</title>
+  <style>
+    body {
+      background: #111;
+      color: #eee;
+      font-family: Arial, sans-serif;
+      margin: 0; padding: 1em;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    h1 {
+      margin-bottom: 1em;
+    }
+    .game-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      justify-content: center;
+      max-width: 900px;
+    }
+    .game-item {
+      background: #222;
+      padding: 1em;
+      border-radius: 8px;
+      width: 180px;
+      box-shadow: 0 0 10px #0a84ff;
+      text-align: center;
+      cursor: pointer;
+      transition: background 0.3s;
+      user-select: none;
+    }
+    .game-item:hover {
+      background: #0a84ff;
+      color: white;
+    }
+    .game-item button {
+      margin-top: 0.8em;
+      background: #0a84ff;
+      border: none;
+      color: white;
+      padding: 0.5em 1em;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
+      width: 100%;
+    }
+    .game-item button:hover {
+      background: #065ecf;
+    }
+  </style>
+</head>
+<body>
+  <h1>Games</h1>
+  <div class="game-list">
+    <div class="game-item">
+      <div>Block Blast</div>
+      <button onclick="openGame('BlockBlast')">Joacă</button>
+    </div>
+    <div class="game-item">
+      <div>Shooter 2D</div>
+      <button onclick="openGame('Shooter2D')">Joacă</button>
+    </div>
+    <div class="game-item">
+      <div>Tetris</div>
+      <button onclick="openGame('Tetris')">Joacă</button>
+    </div>
+    <div class="game-item">
+      <div>Eaglecraft</div>
+      <button onclick="openGame('Eaglecraft')">Joacă</button>
+    </div>
+    <!-- Adaugă aici restul jocurilor când sunt gata -->
+  </div>
+
+  <script>
+    function openGame(folder) {
+      window.location.href = folder + '/index.html';
+    }
+  </script>
+</body>
+</html>
